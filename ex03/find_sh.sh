@@ -1,1 +1,1 @@
-find . -name "*.sh" -exec basename {} .sh \;
+find . -name "*.sh" | awk -F/ '{sub(/.sh$/,"",$NF); print $NF}'
